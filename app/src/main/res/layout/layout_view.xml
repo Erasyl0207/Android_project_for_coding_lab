@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:padding="5dp"
+        app:cardCornerRadius="15dp"
+        app:cardPreventCornerOverlap="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/picture"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY" />
+
+
+            <TextView
+                android:id="@+id/title_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_toEndOf="@id/picture"
+                android:gravity="center"
+                android:text="Main Title"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/nap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Направление:"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/picture"
+                android:layout_below="@id/title_view"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/type_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_below="@id/title_view"
+                android:layout_toEndOf="@id/nap"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+
+            <TextView
+                android:id="@+id/nap2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@id/nap"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/picture"
+                android:layout_marginStart="5dp"
+                android:text="Длительность курса:"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/data_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/nap2"
+                android:layout_below="@id/type_view"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+
+            <TextView
+                android:id="@+id/site_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/data_view"
+                android:layout_alignParentEnd="true"
+                android:text="kantoreuly02@gmail.com"
+                android:textSize="13sp"
+                android:autoLink="web"
+                android:textStyle="italic" />
+
+
+            <ImageButton
+                android:id="@+id/disLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_below="@id/site_view"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/dislike" />
+
+            <TextView
+                android:id="@+id/textView_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="0 likes"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/site_view"
+                android:layout_toEndOf="@id/disLike"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/notFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/site_view"
+                android:background="@android:color/transparent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/not_favorite" />
+
+            <ImageView
+                android:id="@+id/image_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/textView_like"
+                android:layout_below="@id/site_view"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                app:srcCompat="@drawable/ic_comment_black_24dp" />
+
+            <TextView
+                android:id="@+id/comments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View all 20 comments"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_below="@id/textView_like"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
